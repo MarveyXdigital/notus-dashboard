@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Notus Dashboard</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="notus.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- =====================
+           SIDE BAR
+      ====================== -->
+
+      <aside>
+        <header>VUE NOTUS</header>
+
+        <!-- ADMIN LAYOUT PAGES -->
+
+        <div class="admin-layout">
+          <!-- <span class="aside-line"></span> -->
+
+          <h5>ADMIN LAYOUT PAGES</h5>
+
+          <div class="nav" data-page="dashboard" id="click">
+            <span>
+              <i class="fa-solid fa-desktop"></i>
+            </span>
+            <p>DASHBOARD</p>
+          </div>
+
+          <div class="nav" data-page="settings" id="click">
+            <span>
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </span>
+            <p>SETTINGS</p>
+          </div>
+
+          <div class="nav" data-page="tables" id="click">
+            <span>
+              <i class="fa-solid fa-table"></i>
+            </span>
+            <p>TABLES</p>
+          </div>
+
+          <div class="nav" data-page="maps" id="click">
+            <span>
+              <i class="fa-solid fa-map"></i>
+            </span>
+            <p>MAPS</p>
+          </div>
+        </div>
+
+        <!-- AUTH LAYOUT PAGES -->
+
+        <div class="admin-layout">
+          <span class="aside-line"></span>
+
+          <h5>AUTH LAYOUT PAGES</h5>
+
+          <div class="nav">
+            <span>
+              <i class="fa-solid fa-fingerprint"></i>
+            </span>
+            <a href="login.html">LOGIN</a>
+          </div>
+
+          <div class="nav">
+            <span>
+              <i class="fa-solid fa-clipboard"></i>
+            </span>
+            <a href="/signup/signup-form.html">REGISTER</a>
+          </div>
+        </div>
+
+        <!-- LADNING AND PROFILE PAGES -->
+
+        <div class="admin-layout">
+          <span class="aside-line"></span>
+
+          <h5>NO LAYOUT PAGES</h5>
+
+          <div class="nav">
+            <span>
+              <i class="fa-solid fa-house"></i>
+            </span>
+            <a href="landing and profile page/landingpage.html">LANDING PAGE</a>
+          </div>
+
+          <div class="nav">
+            <span>
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <a href="landing and profile page/profilepage.html">PROFILE PAGE</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- =====================
+           MAIN PAGE
+      ====================== -->
+
+      <div id="main-container">
+        <!-- ==============
+            STATIC DASHBOARD SECTION
+               ================ -->
+        <section id="dashboard-header">
+          <!-- navbar -->
+          <div class="main-nav">
+            <div>DASHBOARD</div>
+            <div class="adminimage">
+              <form class="search-bar">
+                <span>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" placeholder="Search here..." />
+              </form>
+              <img src="images/team1.jpg" alt="Admin" />
+            </div>
+          </div>
+
+          <!-- =====================
+               STATISTICS CARDS
+                ================= -->
+
+          <div class="cards">
+            <!-- TRAFFIC -->
+
+            <div class="traffic">
+              <div class="traffic-right">
+                <p>TRAFFIC</p>
+
+                <h2>350,897</h2>
+
+                <small>
+                  <span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    3.48%
+                  </span>
+                  Since last month
+                </small>
+              </div>
+
+              <div class="traffic-left">
+                <i class="fa-solid fa-chart-bar"></i>
+              </div>
+            </div>
+
+            <!-- NEW USERS -->
+
+            <div class="new-user">
+              <div class="newUser-right">
+                <p>NEW USERS</p>
+
+                <h2>2,356</h2>
+
+                <small>
+                  <span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                    3.48%
+                  </span>
+
+                  Since last week
+                </small>
+              </div>
+
+              <div class="newUser-left">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+            </div>
+
+            <!-- SALES -->
+
+            <div class="sales">
+              <div class="sales-right">
+                <p>SALES</p>
+
+                <h2>924</h2>
+
+                <small>
+                  <span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                    1.10%
+                  </span>
+
+                  Since yesterday
+                </small>
+              </div>
+
+              <div class="sales-left">
+                <i class="fa-solid fa-users"></i>
+              </div>
+            </div>
+
+            <!-- PERFORMANCE -->
+
+            <div class="performance">
+              <div class="performance-right">
+                <p>PERFORMANCE</p>
+
+                <h2>49.65%</h2>
+
+                <small>
+                  <span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12%
+                  </span>
+
+                  Since last month
+                </small>
+              </div>
+
+              <div class="performance-left">
+                <i class="fa-solid fa-percent"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==============
+              PAGE CONTENT
+        ================ -->
+
+        <section id="dashboard" class="page active">
+          <!--  Charts -->
+          <div class="charts-row">
+            <!-- OVERVIEW -->
+
+            <div class="overview">
+              <p class="overview-label">OVERVIEW</p>
+
+              <h2>Sales value</h2>
+
+              <div class="chart">
+                <div id="chart-line"></div>
+              </div>
+            </div>
+
+            <!-- PERFORMANCE CHART -->
+
+            <div class="performance-chart">
+              <p class="performance-label">PERFORMANCE</p>
+              <h2>Total orders</h2>
+              <div class="chart">
+                <div id="chart-lineII"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================
+            PAGE VISITS
+            ============= -->
+          <div class="page-visits">
+            <div class="section-heading">
+              <div>
+                <h2>Page visits</h2>
+              </div>
+
+              <button>See all</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr class="pageVisitHead">
+                  <th>PAGE NAME</th>
+                  <th>VISITORS</th>
+                  <th>UNIQUE USERS</th>
+                  <th>BOUNCE RATE</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="pageName">/argon/</td>
+                  <td>4,569</td>
+                  <td>340</td>
+                  <td>
+                    <span class="pagearrow up"
+                      ><i class="fa soild fa-arrow-up"></i></span
+                    >46.53%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pageName">/argon/index.html</td>
+                  <td>3,985</td>
+                  <td>319</td>
+                  <td>
+                    <span class="pagearrow down"
+                      ><i class="fa soild fa-arrow-down"></i></span
+                    >46.53%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pageName">/argon/charts.html</td>
+                  <td>3,513</td>
+                  <td>294</td>
+                  <td>
+                    <span class="pagearrow down"
+                      ><i class="fa soild fa-arrow-down"></i></span
+                    >36.49%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pageName">/argon/tables.html</td>
+                  <td>2,050</td>
+                  <td>147</td>
+                  <td>
+                    <span class="pagearrow up"
+                      ><i class="fa soild fa-arrow-up"></i></span
+                    >50.87%
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pageName">/argon/profile.html</td>
+                  <td>1,795</td>
+                  <td>190</td>
+                  <td>
+                    <span class="pagearrow down"
+                      ><i class="fa soild fa-arrow-down"></i></span
+                    >46.53%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- =========================
+         SOCIAL TRAFFIC
+           =================== -->
+
+          <div class="social-traffic">
+            <div class="section-heading">
+              <div>
+                <h2>Social traffic</h2>
+              </div>
+
+              <button>See all</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr class="social-headers">
+                  <th>REFERRAL</th>
+                  <th>VISITORS</th>
+                  <th>SHARE</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Facebook</td>
+                  <td>1,480</td>
+                  <td class="share-cell">
+                    <span>60%</span>
+
+                    <div class="progress">
+                      <div class="share-bar facebook-bar"></div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Google</td>
+                  <td>4,807</td>
+                  <td class="share-cell">
+                    <span>80%</span>
+
+                    <div class="progress">
+                      <div class="share-bar purple-bar"></div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Instagram</td>
+                  <td>3,678</td>
+                  <td class="share-cell">
+                    <span>75%</span>
+
+                    <div class="progress">
+                      <div class="share-bar blue-bar"></div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Twitter</td>
+                  <td>2,645</td>
+                  <td class="share-cell">
+                    <span>30%</span>
+
+                    <div class="progress">
+                      <div class="share-bar twitter-bar"></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="settings" class="page">
+          <!-- Left Side: Form Container -->
+          <div id="my-account">
+            <header>
+              <h2>My account</h2>
+              <button class="settings-btn">SETTINGS</button>
+            </header>
+
+            <form id="myaccount-form">
+              <!-- Section 1: User Information -->
+              <h5 class="section-heading">USER INFORMATION</h5>
+              <div class="userInformation">
+                <div class="form-group">
+                  <label for="userName">USERNAME</label>
+                  <input type="text" id="userName" value="lucky.jesse" />
+                </div>
+                <div class="form-group">
+                  <label for="email">EMAIL ADDRESS</label>
+                  <input type="email" id="email" value="jesse@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="firstName">FIRST NAME</label>
+                  <input type="text" id="firstName" value="Lucky" />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">LAST NAME</label>
+                  <input type="text" id="lastName" value="Jesse" />
+                </div>
+              </div>
+
+              <hr class="input-divider" />
+
+              <!-- Section 2: Contact Information -->
+              <h5 class="section-heading">CONTACT INFORMATION</h5>
+              <div class="userAddress">
+                <div class="form-group full-width">
+                  <label for="address">ADDRESS</label>
+                  <input
+                    type="text"
+                    id="address"
+                    value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                  />
+                </div>
+                <div class="cityCountry">
+                  <div class="form-group">
+                    <label for="city">CITY</label>
+                    <input type="text" id="city" value="New York" />
+                  </div>
+                  <div class="form-group">
+                    <label for="country">COUNTRY</label>
+                    <input type="text" id="country" value="United States" />
+                  </div>
+                  <div class="form-group">
+                    <label for="postalCode">POSTAL CODE</label>
+                    <input
+                      type="text"
+                      id="postalCode"
+                      placeholder="Postal Code"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <hr class="input-divider" />
+
+              <!-- Section 3: About Me -->
+              <h5 class="section-heading">ABOUT ME</h5>
+              <div class="aboutMe">
+                <div class="form-group full-width">
+                  <label for="about">ABOUT ME</label>
+                  <textarea id="about" rows="3">
+                   A beautiful UI Kit and Admin for NextJS & Tailwind CSS. It is Free and Open Source.</textarea
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Side: Profile Card -->
+          <div class="profile-card">
+            <div class="profile-header-bg">
+              <img
+                src="images/team1.jpg"
+                alt="Profile"
+                class="profile-avatar"
+              />
+            </div>
+
+            <div class="profile-body">
+              <!-- Stats Row -->
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <span class="stat-num">22</span>
+                  <span class="stat-label">Friends</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num">10</span>
+                  <span class="stat-label">Photos</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num">89</span>
+                  <span class="stat-label">Comments</span>
+                </div>
+              </div>
+
+              <div class="profile-info">
+                <h3>Jenna Stones</h3>
+                <p class="profile-location">
+                  <span class="icon"></span> LOS ANGELES, CALIFORNIA
+                </p>
+                <p class="profile-job">
+                  <span class="icon"></span> Solution Manager - <br />
+                  Creative Tim Officer
+                </p>
+                <p class="profile-edu">
+                  <span class="icon"></span> University of Computer <br />
+                  Science
+                </p>
+              </div>
+
+              <hr class="card-divider" />
+
+              <!-- User Bio -->
+              <p class="profile-bio">
+                An artist of considerable range, Jenna the name taken by
+                Melbourne-raised, Brooklyn-based Nick Murphy writes, performs
+                and records all of his own music, giving it a warm, intimate...
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--
+        =============== 
+        TABLE SECTION
+         ================= -->
+        <section id="tables" class="page">
+          <div class="container">
+            <div class="card-tables">
+              <!-- Header -->
+              <div class="table-header">
+                <h2 class="table-title">Card Tables</h2>
+              </div>
+
+              <!-- Table -->
+              <div class="table-wrapper">
+                <table class="data-table">
+                  <thead>
+                    <tr class="tablename">
+                      <th class="col-project">PROJECT</th>
+                      <th class="col-budget">BUDGET</th>
+                      <th class="col-status">STATUS</th>
+                      <th class="col-users">USERS</th>
+                      <th class="col-completion">COMPLETION</th>
+                      <th class="col-actions"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Row 1 -->
+                    <tr class="table-row">
+                      <td class="col-project">
+                        <div class="project-info">
+                          <div class="project-avatar">
+                            <i class="fas fa-palette"></i>
+                          </div>
+                          <span class="project-name">Argon Design System</span>
+                        </div>
+                      </td>
+                      <td class="col-budget">
+                        <span class="budget-amount">$2,500 USD</span>
+                      </td>
+                      <td class="col-status">
+                        <div class="status-badge pending">
+                          <span class="status-dot"></span>
+                          <span class="status-text">pending</span>
+                        </div>
+                      </td>
+                      <td class="col-users">
+                        <div class="user-avatars">
+                          <img src="/images/team1.jpg" alt="User" />
+                          <img src="/images/team2.jpg" alt="User" />
+                          <img src="/images/team3.jpg" alt="User" />
+                          <img src="/images/team4.png" alt="User" />
+                        </div>
+                      </td>
+                      <td class="col-completion">
+                        <div class="completion-info">
+                          <span class="completion-percent">60%</span>
+                          <div class="progress-bar">
+                            <div class="progress-fill pending"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="col-actions">
+                        <button class="action-btn">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr class="table-row">
+                      <td class="col-project">
+                        <div class="project-info">
+                          <div class="project-avatar">
+                            <i class="fas fa-cube"></i>
+                          </div>
+                          <span class="project-name"
+                            >Angular Now UI Kit PRO</span
+                          >
+                        </div>
+                      </td>
+                      <td class="col-budget">
+                        <span class="budget-amount">$1,800 USD</span>
+                      </td>
+                      <td class="col-status">
+                        <div class="status-badge completed">
+                          <span class="status-dot"></span>
+                          <span class="status-text">completed</span>
+                        </div>
+                      </td>
+                      <td class="col-users">
+                        <div class="user-avatars">
+                          <img src="/images/team1.jpg" alt="User" />
+                          <img src="/images/team2.jpg" alt="User" />
+                          <img src="/images/team3.jpg" alt="User" />
+                          <img src="/images/team4.png" alt="User" />
+                        </div>
+                      </td>
+                      <td class="col-completion">
+                        <div class="completion-info">
+                          <span class="completion-percent">100%</span>
+                          <div class="progress-bar">
+                            <div
+                              class="progress-fill completed"
+                              style="width: 100%"
+                            ></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="col-actions">
+                        <button class="action-btn">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <!-- Row 3 -->
+                    <tr class="table-row">
+                      <td class="col-project">
+                        <div class="project-info">
+                          <div class="project-avatar">
+                            <i class="fas fa-paint-brush"></i>
+                          </div>
+                          <span class="project-name"
+                            >Black Dashboard Sketch</span
+                          >
+                        </div>
+                      </td>
+                      <td class="col-budget">
+                        <span class="budget-amount">$3,150 USD</span>
+                      </td>
+                      <td class="col-status">
+                        <div class="status-badge delayed">
+                          <span class="status-dot"></span>
+                          <span class="status-text">delayed</span>
+                        </div>
+                      </td>
+                      <td class="col-users">
+                        <div class="user-avatars">
+                          <img src="/images/team1.jpg" alt="User" />
+                          <img src="/images/team2.jpg" alt="User" />
+                          <img src="/images/team3.jpg" alt="User" />
+                          <img src="/images/team4.png" alt="User" />
+                        </div>
+                      </td>
+                      <td class="col-completion">
+                        <div class="completion-info">
+                          <span class="completion-percent">73%</span>
+                          <div class="progress-bar">
+                            <div
+                              class="progress-fill delayed"
+                              style="width: 73%"
+                            ></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="col-actions">
+                        <button class="action-btn">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <!-- Row 4 -->
+                    <tr class="table-row">
+                      <td class="col-project">
+                        <div class="project-info">
+                          <div class="project-avatar">
+                            <i class="fas fa-layer-group"></i>
+                          </div>
+                          <span class="project-name"
+                            >React Material Dashboard</span
+                          >
+                        </div>
+                      </td>
+                      <td class="col-budget">
+                        <span class="budget-amount">$4,400 USD</span>
+                      </td>
+                      <td class="col-status">
+                        <div class="status-badge on-schedule">
+                          <span class="status-dot"></span>
+                          <span class="status-text">on schedule</span>
+                        </div>
+                      </td>
+                      <td class="col-users">
+                        <div class="user-avatars">
+                          <img src="/images/team1.jpg" alt="User" />
+                          <img src="/images/team2.jpg" alt="User" />
+                          <img src="/images/team3.jpg" alt="User" />
+                          <img src="/images/team4.png" alt="User" />
+                        </div>
+                      </td>
+                      <td class="col-completion">
+                        <div class="completion-info">
+                          <span class="completion-percent">90%</span>
+                          <div class="progress-bar">
+                            <div
+                              class="progress-fill on-schedule"
+                              style="width: 90%"
+                            ></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="col-actions">
+                        <button class="action-btn">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <!-- Row 5 -->
+                    <tr class="table-row">
+                      <td class="col-project">
+                        <div class="project-info">
+                          <div class="project-avatar">
+                            <i class="fas fa-react"></i>
+                          </div>
+                          <span class="project-name"
+                            >React Material Dashboard</span
+                          >
+                        </div>
+                      </td>
+                      <td class="col-budget">
+                        <span class="budget-amount">$2,200 USD</span>
+                      </td>
+                      <td class="col-status">
+                        <div class="status-badge completed">
+                          <span class="status-dot"></span>
+                          <span class="status-text">completed</span>
+                        </div>
+                      </td>
+                      <td class="col-users">
+                        <div class="user-avatars">
+                          <img src="/images/team1.jpg" alt="User" />
+                          <img src="/images/team2.jpg" alt="User" />
+                          <img src="/images/team3.jpg" alt="User" />
+                          <img src="/images/team4.png" alt="User" />
+                        </div>
+                      </td>
+                      <td class="col-completion">
+                        <div class="completion-info">
+                          <span class="completion-percent">100%</span>
+                          <div class="progress-bar">
+                            <div
+                              class="progress-fill completed"
+                              style="width: 100%"
+                            ></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="col-actions">
+                        <button class="action-btn">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="maps" class="page">
+          <div class="mapdetails"></div>
+        </section>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/7.1.0/apexcharts.min.js"
+      integrity="sha512-N0+WI1lzyjjHpd0bVsvGLavbPzx3SyAANuD/BuwWkyRd+r/YMQYNeU+yb9A0Ycv1TW5kBo21gdn+Brvhh8pnew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="notus.js"></script>
+  </body>
+</html>
